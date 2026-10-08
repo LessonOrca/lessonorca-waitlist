@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LessonOrca | Founding Beta Waitlist</title>
+<meta name="description" content="The most efficient and personalized way to learn anything. 150 founding spots. Beta opens Oct 26.">
+<meta property="og:title" content="LessonOrca founding beta">
+<meta property="og:description" content="An AI tutor that adapts to you with every answer. 150 founding spots. Beta opens Oct 26.">
+<meta property="og:image" content="og.jpg">
+<meta name="theme-color" content="#050505">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Geist:wght@400..700&family=Geist+Mono:wght@400..600&display=swap">
+<style>
+  :root{
+    --bg:#050505; --panel:#0e0f0e; --line:#1f2420; --ink:#f4f6f3; --dim:#9aa39b; --mut:#6c746d;
+    --acc:#00ff66; --acc-ink:#001a0a; --warn:#ff6a3d;
+    --f-disp:"Archivo",system-ui,sans-serif; --f-body:"Geist",system-ui,-apple-system,"Segoe UI",sans-serif; --f-mono:"Geist Mono",ui-monospace,Menlo,monospace;
+    color-scheme:dark;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:max(20px,env(safe-area-inset-top)) 20px max(32px,env(safe-area-inset-bottom))}
+  header{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:6px 0 28px}
+  .wm{font-family:var(--f-disp);font-weight:800;font-size:22px;letter-spacing:-.01em}
+  .wm i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--acc);box-shadow:0 0 12px var(--acc);margin-left:6px;vertical-align:2px}
+  .tag{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+  .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+  @media (max-width:860px){.grid{grid-template-columns:1fr;gap:28px}}
+  h1{font-family:var(--f-disp);font-weight:850;font-stretch:112%;font-size:clamp(38px,6.2vw,72px);line-height:.96;letter-spacing:-.02em;margin:0 0 18px;text-wrap:balance}
+  h1 em{font-style:normal;color:var(--acc)}
+  .lead{font-size:clamp(17px,2vw,20px);line-height:1.5;color:var(--dim);margin:0 0 26px;max-width:34ch}
+  .offer{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 26px}
+  .chip{font-family:var(--f-mono);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:7px 12px;color:var(--ink);background:var(--panel)}
+  .chip b{color:var(--acc);font-weight:600}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px}
+  .card.glow{border-color:rgba(0,255,102,.45);box-shadow:0 0 0 1px rgba(0,255,102,.15),0 20px 60px -30px rgba(0,255,102,.45)}
+  form{display:flex;gap:10px;flex-wrap:wrap}
+  input[type=email]{flex:1 1 220px;min-width:0;font:inherit;font-size:17px;color:var(--ink);background:#070807;border:1px solid var(--line);border-radius:12px;padding:15px 16px;outline:none}
+  input[type=email]:focus{border-color:var(--acc)}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+  button,.btn{font:inherit;font-weight:700;font-size:16px;border:0;border-radius:12px;padding:15px 20px;cursor:pointer;background:var(--acc);color:var(--acc-ink);text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;white-space:nowrap}
+  button[disabled]{opacity:.6;cursor:wait}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+  .fine{font-size:13px;color:var(--mut);margin:12px 0 0;line-height:1.5}
+  .err{color:var(--warn);font-size:14px;margin:10px 0 0;min-height:1em}
+  .stats{display:flex;gap:22px;flex-wrap:wrap;margin-top:18px}
+  .stat .n{font-family:var(--f-disp);font-weight:800;font-size:28px;font-variant-numeric:tabular-nums}
+  .stat .l{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+  .media{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#000;aspect-ratio:9/16;max-height:640px;justify-self:center;width:min(100%,360px)}
+  .media video{width:100%;height:100%;object-fit:cover;display:block}
+  .media .ph{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:24px;font-family:var(--f-disp);font-weight:800;font-size:28px;line-height:1.05}
+  .media .ph span{color:var(--acc)}
+  .big{font-family:var(--f-disp);font-weight:900;font-stretch:115%;font-size:clamp(64px,12vw,120px);line-height:.9;letter-spacing:-.03em;font-variant-numeric:tabular-nums;margin:6px 0 6px}
+  .big small{font-size:.35em;color:var(--dim);font-weight:700;letter-spacing:0}
+  .bar{height:8px;border-radius:99px;background:#151916;overflow:hidden;margin:16px 0 8px}
+  .bar i{display:block;height:100%;background:var(--acc);border-radius:99px;width:0;transition:width .8s ease}
+  .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+  .link{display:flex;gap:8px;margin-top:10px}
+  .link input{flex:1;min-width:0;font:inherit;font-family:var(--f-mono);font-size:14px;color:var(--ink);background:#070807;border:1px solid var(--line);border-radius:10px;padding:12px}
+  .how{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:44px}
+  @media (max-width:760px){.how{grid-template-columns:1fr}}
+  .how .card h3{font-family:var(--f-disp);font-weight:800;font-size:19px;margin:0 0 6px}
+  .how .card p{margin:0;color:var(--dim);line-height:1.5;font-size:15px}
+  .k{font-family:var(--f-mono);font-size:12px;color:var(--acc);letter-spacing:.1em}
+  footer{margin-top:44px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--mut);font-size:13px}
+  @media (max-width:560px){.tag{display:none}.media{max-height:62vh;width:min(100%,300px)}}
+  [hidden]{display:none!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="wm">LessonOrca<i></i></div>
+    <div class="tag">Founding beta · SAT &amp; ACT</div>
+  </header>
+
+  <main class="grid">
+    <section>
+      <h1>The most efficient and personalized way to <em>learn anything.</em></h1>
+      <p class="lead">An AI tutor that adapts to you with every answer. Same question, different mistake, different lesson.</p>
+      <div class="offer">
+        <span class="chip"><b>150</b> founding spots</span>
+        <span class="chip">Beta opens <b>Oct 26</b></span>
+        <span class="chip">2 weeks free, then <b>$19/mo</b> locked</span>
+      </div>
+
+      <!-- View 1: signup -->
+      <div class="card glow" id="v-join">
+        <form id="f" novalidate>
+          <input type="email" id="email" name="email" placeholder="you@email.com" autocomplete="email" required aria-label="Email">
+          <input class="hp" type="text" name="website" id="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button id="go" type="submit">Get in line <span aria-hidden="true">→</span></button>
+        </form>
+        <p class="err" id="err" role="alert"></p>
+        <p class="fine">Top 150 on Oct 23 get in. Invite friends to move up: each friend who confirms moves you up 5 spots.</p>
+      </div>
+
+      <!-- View 2: check inbox -->
+      <div class="card glow" id="v-sent" hidden>
+        <div class="k">ONE MORE STEP</div>
+        <h2 style="font-family:var(--f-disp);font-weight:800;font-size:28px;margin:8px 0">Check your inbox</h2>
+        <p style="color:var(--dim);margin:0;line-height:1.5">We sent a confirm link to <b id="sent-to" style="color:var(--ink)"></b>. Your spot counts once you click it. Not there? Check spam or Promotions.</p>
+      </div>
+
+      <!-- View 3: status -->
+      <div class="card glow" id="v-me" hidden>
+        <div class="k" id="me-kicker">YOUR SPOT</div>
+        <div class="big" id="me-pos">#–</div>
+        <div style="color:var(--dim)" id="me-of"></div>
+        <div class="bar"><i id="me-bar"></i></div>
+        <div style="font-weight:600" id="me-line"></div>
+        <div class="stats">
+          <div class="stat"><div class="n" id="me-refs">0</div><div class="l">Friends joined</div></div>
+          <div class="stat"><div class="n">+5</div><div class="l">Spots per friend</div></div>
+        </div>
+        <div class="link">
+          <input id="me-link" readonly aria-label="Your invite link">
+          <button class="btn" id="copy" type="button">Copy</button>
+        </div>
+        <div class="row">
+          <a class="btn ghost" id="sh-sms" href="#">Text it</a>
+          <a class="btn ghost" id="sh-wa" href="#" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn ghost" id="sh-x" href="#" target="_blank" rel="noopener">Post on X</a>
+        </div>
+        <p class="fine">Bookmark this page to check your spot. Your spot link: <span id="me-self" style="font-family:var(--f-mono)"></span></p>
+      </div>
+
+      <div class="card" id="v-err" hidden>
+        <p style="margin:0">That link didn't work. Enter your email again and we'll send a fresh one.</p>
+      </div>
+
+      <div class="stats" id="pub-stats">
+        <div class="stat" id="count-wrap" hidden><div class="n" id="count">0</div><div class="l">On the list</div></div>
+        <div class="stat"><div class="n" id="cd">--</div><div class="l">Until beta opens</div></div>
+      </div>
+    </section>
+
+    <aside class="media" aria-label="LessonOrca reel">
+      <video id="reel" src="reel.mp4" poster="poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
+      <div class="ph" id="ph" hidden><div>One answer.<br><span>Everything updates.</span></div></div>
+    </aside>
+  </main>
+
+  <section class="how">
+    <div class="card"><div class="k">01</div><h3>Get in line</h3><p>Confirm your email to lock your place. Earlier signups start higher.</p></div>
+    <div class="card"><div class="k">02</div><h3>Move up</h3><p>Share your link. Every friend who confirms moves you up 5 spots.</p></div>
+    <div class="card"><div class="k">03</div><h3>Top 150 get in</h3><p>Founding members get 2 weeks free, then $19/mo locked for as long as they stay.</p></div>
+  </section>
+
+  <footer>
+    <span>© 2026 LessonOrca · Berkeley, CA</span>
+    <span>We only email you about the beta. Questions: hello@lessonorca.com</span>
+  </footer>
+</div>
+
+<script>
+/* ===== CONFIG: fill these 3 values ===== */
+const SUPABASE_URL = "https://rrrqmgyknbdayvraonjj.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_EljrDX93LPuvG9HNQZaLZA_5rpiQ_kr";
+const BETA_OPENS = "2026-10-26T09:00:00-07:00";
+const SHOW_COUNT_FROM = 50; // hide the public count until the list looks healthy
+/* ====================================== */
+
+const $ = id => document.getElementById(id);
+const qs = new URLSearchParams(location.search);
+const SITE = location.origin + location.pathname.replace(/index\.html$/, "");
+
+function store(k, v){ try{ localStorage.setItem(k, v); }catch(e){} }
+function read(k){ try{ return localStorage.getItem(k); }catch(e){ return null; } }
+
+// Remember referral and source tags across visits
+const ref = (qs.get("ref") || read("lo_ref") || "").toLowerCase();
+const src = (qs.get("src") || read("lo_src") || "").toLowerCase();
+if (qs.get("ref")) store("lo_ref", qs.get("ref").toLowerCase());
+if (qs.get("src")) store("lo_src", qs.get("src").toLowerCase());
+
+async function rpc(name, args){
+  const r = await fetch(`${SUPABASE_URL}/rest/v1/rpc/${name}`, {
+    method: "POST",
+    headers: { apikey: SUPABASE_ANON_KEY, "Content-Type": "application/json" },
+    body: JSON.stringify(args || {})
+  });
+  if (!r.ok) throw new Error(name + " " + r.status);
+  return r.json();
+}
+
+function show(id){ ["v-join","v-sent","v-me","v-err"].forEach(v => $(v).hidden = v !== id); }
+
+// Countdown
+function tick(){
+  const ms = Date.parse(BETA_OPENS) - Date.now();
+  if (ms <= 0){ $("cd").textContent = "Open"; return; }
+  const d = Math.floor(ms/864e5), h = Math.floor(ms%864e5/36e5), m = Math.floor(ms%36e5/6e4);
+  $("cd").textContent = d > 0 ? `${d}d ${h}h` : `${h}h ${m}m`;
+}
+tick(); setInterval(tick, 30000);
+
+// Public count
+rpc("public_count").then(n => {
+  if (Number(n) >= SHOW_COUNT_FROM){ $("count").textContent = Number(n).toLocaleString(); $("count-wrap").hidden = false; }
+}).catch(() => {});
+
+// Reel fallback
+$("reel").addEventListener("error", () => { $("reel").hidden = true; $("ph").hidden = false; });
+
+// Signup
+$("f").addEventListener("submit", async e => {
+  e.preventDefault();
+  const email = $("email").value.trim();
+  $("err").textContent = "";
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)){ $("err").textContent = "Enter a valid email."; return; }
+  $("go").disabled = true;
+  try{
+    const r = await fetch(`${SUPABASE_URL}/functions/v1/join`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, ref, src, website: $("website").value })
+    });
+    const j = await r.json().catch(() => ({}));
+    if (r.ok){ $("sent-to").textContent = email; show("v-sent"); }
+    else if (j.error === "disposable_email") $("err").textContent = "Use your real email so we can reach you on Oct 26.";
+    else if (j.error === "rate_limited") $("err").textContent = "Lots of signups from this network. Try again in a bit.";
+    else if (j.error === "invalid_email") $("err").textContent = "Enter a valid email.";
+    else $("err").textContent = "Something went wrong. Try again in a minute.";
+  }catch(err){ $("err").textContent = "Couldn't reach the server. Check your connection."; }
+  $("go").disabled = false;
+});
+
+// Status view
+async function loadMe(code){
+  show("v-me");
+  const link = `${SITE}?ref=${code}`;
+  const self = `${SITE}?me=${code}`;
+  $("me-link").value = link;
+  $("me-self").textContent = self;
+  const msg = `I'm in line for LessonOrca's founding beta, an AI SAT/ACT tutor that adapts to every answer. Only 150 spots: ${link}`;
+  $("sh-sms").href = `sms:?&body=${encodeURIComponent(msg)}`;
+  $("sh-wa").href = `https://wa.me/?text=${encodeURIComponent(msg)}`;
+  $("sh-x").href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(msg)}`;
+  if (qs.get("new")) $("me-kicker").textContent = "YOU'RE CONFIRMED";
+  try{
+    const s = await rpc("get_status", { p_code: code });
+    if (!s){ $("me-pos").textContent = "#–"; $("me-line").textContent = "We couldn't find that spot. Confirm your email first."; return; }
+    $("me-pos").innerHTML = `#${Number(s.position).toLocaleString()}`;
+    $("me-of").textContent = `of ${Number(s.total).toLocaleString()} on the list`;
+    $("me-refs").textContent = s.referrals;
+    const inside = s.position <= 150;
+    $("me-bar").style.width = Math.max(4, Math.min(100, inside ? 100 : 150 / s.position * 100)) + "%";
+    $("me-line").textContent = inside
+      ? "You're in the founding 150. People who invite friends can pass you, so share your link."
+      : `You're ${(s.position - 150).toLocaleString()} spots from the founding 150. ${Math.ceil((s.position - 150) / 5)} friends would get you in.`;
+  }catch(e){ $("me-line").textContent = "Couldn't load your spot. Refresh in a minute."; }
+}
+
+$("copy").addEventListener("click", async () => {
+  try{ await navigator.clipboard.writeText($("me-link").value); $("copy").textContent = "Copied"; }
+  catch(e){ $("me-link").select(); }
+  setTimeout(() => $("copy").textContent = "Copy", 1600);
+});
+
+const me = (qs.get("me") || "").toLowerCase();
+if (/^[a-f0-9]{8}$/.test(me)) loadMe(me);
+else if (qs.get("err")) show("v-err"), $("v-join").hidden = false;
+</script>
+</body>
+</html>
