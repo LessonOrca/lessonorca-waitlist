@@ -79,10 +79,54 @@
   .stats{display:flex;gap:28px;flex-wrap:wrap;margin-top:20px}
   .stat .n{font-family:var(--f-disp);font-weight:400;font-size:clamp(30px,3.2vw,44px);line-height:1.05;font-variant-numeric:tabular-nums;color:var(--heading)}
   .stat .l{font-size:15px;font-weight:600;color:var(--mut)}
-  .media{position:relative;overflow:hidden;border:2px solid var(--line);background:var(--riso-blue-deep);aspect-ratio:9/16;max-height:640px;justify-self:center;width:min(100%,360px);rotate:1.2deg}
-  .media video{width:100%;height:100%;object-fit:cover;display:block}
-  .media .ph{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:24px;font-family:var(--f-disp);font-weight:400;font-size:34px;line-height:1.1;color:#fff}
-  .media .ph span{color:var(--black);background:var(--riso-yellow);padding:0 .08em}
+  .wm{display:flex;align-items:center;gap:10px}
+  .wm .mark{width:40px;height:auto;color:#fff;--cut:var(--riso-blue);flex:0 0 auto}
+  @media (max-width:560px){.wm .mark{width:32px}}
+  .media{position:relative;justify-self:center;width:min(100%,460px);background:var(--paper);color:var(--black);border:2px solid var(--riso-pink);
+    outline:2px solid var(--riso-pink);outline-offset:6px;rotate:1deg;--cut:var(--paper)}
+  .media::before{content:"";position:absolute;top:-14px;left:50%;width:84px;height:24px;background:var(--tape);translate:-50% 0;rotate:-3deg;z-index:2}
+  .media .ph{padding:22px 22px 18px}
+  .fig-top{display:flex;align-items:center;gap:8px;padding-bottom:12px;border-bottom:1.5px solid rgba(0,80,140,.35)}
+  .mark.sm{width:30px;height:auto;color:var(--riso-blue)}
+  .fig-wm{font-family:var(--f-disp);font-size:24px;line-height:1;color:var(--riso-blue)}
+  .fig-tag{margin-left:auto;font-size:14px;font-weight:600;color:var(--grey-600)}
+  .fig-title{font-family:var(--f-disp);font-size:clamp(28px,3vw,34px);line-height:1.08;letter-spacing:-.012em;color:var(--riso-blue);margin:14px 0 6px}
+  .fig-title span{color:var(--black);background:linear-gradient(var(--riso-yellow),var(--riso-yellow)) no-repeat 0 16%/100% 80%;padding:0 .06em}
+  .fstep{display:grid;grid-template-columns:30px 1fr;gap:10px;padding:14px 0 12px;border-bottom:1.5px dashed var(--riso-pink)}
+  .fstep:last-of-type{border-bottom:0}
+  .fnum{font-family:var(--f-hand);font-weight:700;font-size:32px;line-height:1;color:var(--black)}
+  .flabel{font-size:15px;font-weight:700;color:var(--riso-blue);margin-bottom:8px}
+  .slip{background:var(--paper);border:2px solid var(--riso-blue);padding:8px 12px;font-size:15px;line-height:1.35}
+  .slip.q{rotate:-.8deg}
+  .work{font-family:var(--f-hand);font-weight:700;font-size:22px;line-height:1.45;color:var(--riso-blue);margin:6px 0 0 6px}
+  .ring{position:relative;display:inline-block;padding:0 12px}
+  .ring svg{position:absolute;inset:-5px -4px;width:calc(100% + 8px);height:calc(100% + 10px);overflow:visible}
+  .ring path{fill:none;stroke:var(--riso-pink);stroke-width:2.5;stroke-linecap:round}
+  .bub{display:flex;gap:8px;align-items:flex-start;font-size:15px;line-height:1.35;padding:9px 12px;border:2px solid var(--riso-blue);max-width:92%}
+  .bub.orca{background:var(--riso-blue);color:#fff;--cut:var(--riso-yellow)}
+  .bub .av{flex:0 0 24px;height:24px;border-radius:50%;background:var(--riso-yellow);display:grid;place-items:center;margin-top:-1px}
+  .mark.xs{width:17px;height:auto;color:var(--riso-blue)}
+  .bub.you{background:var(--pastel-pink-light);color:var(--black);margin:8px 0 0 auto;width:max-content}
+  .why{font-family:var(--f-hand);font-weight:700;font-size:16px;line-height:1.3;color:var(--riso-magenta);margin-top:8px}
+  .slip.plan{rotate:.8deg;padding:10px 12px 6px}
+  .ph-head{display:flex;justify-content:space-between;gap:8px;font-size:14px;padding-bottom:6px;border-bottom:1.5px solid rgba(0,80,140,.35)}
+  .ph-head b{color:var(--riso-blue)} .ph-head span{color:var(--grey-600)}
+  .pr{display:grid;grid-template-columns:38px 1fr auto;gap:8px;align-items:baseline;padding:6px 0;border-bottom:1.5px solid rgba(0,80,140,.2)}
+  .pr:last-child{border-bottom:0}
+  .pr b{color:var(--riso-blue);font-size:14px}
+  .pr .t{font-family:var(--f-hand);font-weight:700;font-size:16px;color:var(--riso-blue)}
+  .pr .m{font-size:14px;color:var(--grey-600)}
+  .pr s{color:var(--riso-magenta);text-decoration:none;background:linear-gradient(var(--riso-pink),var(--riso-pink)) no-repeat 0 58%/100% 3px}
+  .pr mark{background:var(--riso-yellow);color:var(--black);padding:0 4px}
+  .pen{display:inline-block;margin-top:12px;background:var(--pastel-pink);border:2px solid var(--black);padding:4px 12px;font-family:var(--f-hand);font-weight:700;font-size:18px;color:var(--black);rotate:-2.5deg}
+  .fig-eg{font-size:14px;color:var(--grey-600);margin-top:8px}
+  /* motion: once, only when JS marks the page and the reader allows it */
+  .mo .media .fstep{opacity:0;translate:0 14px;animation:fr .6s cubic-bezier(.2,.7,.2,1) forwards}
+  .mo .media .fstep:nth-of-type(1){animation-delay:.3s} .mo .media .fstep:nth-of-type(2){animation-delay:.6s} .mo .media .fstep:nth-of-type(3){animation-delay:.9s}
+  .mo .media .ring path{stroke-dasharray:1;stroke-dashoffset:1;animation:fd .8s ease-out 1s forwards}
+  .mo .media .fig-title span{background-size:0% 80%;animation:fh .7s cubic-bezier(.2,.7,.2,1) .2s forwards}
+  .mo .media .pr s{background-size:0% 3px;animation:fs .5s ease-out 1.6s forwards}
+  @keyframes fr{to{opacity:1;translate:0 0}} @keyframes fd{to{stroke-dashoffset:0}} @keyframes fh{to{background-size:100% 80%}} @keyframes fs{to{background-size:100% 3px}}
   .k{font-family:var(--f-hand);font-weight:700;font-size:22px;line-height:1.2;color:var(--heading);display:inline-block;rotate:-2deg}
   #v-sent h2{font-weight:400!important;font-size:clamp(34px,3.6vw,44px)!important;line-height:1.05;color:var(--heading)}
   .big{font-family:var(--f-disp);font-weight:400;font-size:clamp(84px,11vw,132px);line-height:.95;letter-spacing:-.012em;font-variant-numeric:tabular-nums;margin:4px 0;color:var(--heading)}
@@ -102,15 +146,16 @@
   .how .card h3{font-family:var(--f-disp);font-weight:400;font-size:clamp(30px,3vw,36px);line-height:1.08;letter-spacing:-.012em;margin:10px 0 8px;color:var(--black)}
   .how .card p{margin:0;color:var(--grey-700);line-height:1.45;font-size:18px}
   footer{margin-top:56px;padding-top:20px;border-top:2px solid var(--riso-blue);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--grey-600);font-size:15px}
-  @media (max-width:560px){.tag{display:none}.media{max-height:62vh;width:min(100%,300px)}}
+  @media (max-width:560px){.tag{display:none}.media .ph{padding:18px 16px 14px}}
   [hidden]{display:none!important}
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="orca" viewBox="0 0 108.67 99.40"><path d="M105.75 40.28 C104.00 37.68 100.75 38.38 98.11 37.56 C95.15 36.63 93.21 33.91 90.85 31.92 C86.78 28.49 81.33 27.22 76.04 26.60 C67.18 25.57 58.22 26.08 49.31 26.59 C44.93 26.84 40.55 27.09 36.23 27.84 C30.52 28.84 7.49 36.78 2.00 38.63 L7.24 83.91 C10.94 81.30 23.35 70.63 27.37 68.52 C28.07 68.15 29.09 67.85 29.53 68.51 C28.44 70.38 27.00 72.06 25.30 73.44 C24.77 73.86 24.23 74.25 23.76 74.73 C22.28 76.26 21.80 78.48 21.72 80.59 C21.66 82.29 21.82 84.00 21.73 85.69 C26.77 83.74 32.30 82.85 37.62 81.69 C40.34 81.10 43.04 80.43 45.72 79.67 C46.67 78.00 47.55 76.30 48.42 74.61 C49.75 72.01 50.73 69.23 51.22 66.35 C51.34 65.66 51.41 64.92 51.07 64.31 C50.73 63.72 50.08 63.39 49.47 63.08 C47.71 62.22 46.02 61.23 44.21 60.49 L44.25 59.17 C51.89 56.07 58.35 50.67 65.86 47.28 C67.03 46.75 68.26 46.26 69.55 46.33 C70.83 46.39 72.16 47.16 72.47 48.38 C72.80 49.70 72.12 51.56 73.36 52.16 C73.76 52.35 74.23 52.30 74.67 52.24 C79.82 51.49 84.42 48.73 89.37 47.10 C94.24 45.50 99.49 45.00 104.58 45.67 L105.82 45.74 C106.07 45.24 106.26 44.71 106.39 44.13 C106.67 42.81 106.50 41.41 105.75 40.28 L105.75 40.28 M69.34 40.67 C66.30 42.96 62.63 44.16 59.03 45.33 C57.10 45.95 55.15 46.58 53.13 46.69 C51.10 46.80 49.09 46.37 47.10 45.95 C44.76 45.46 42.42 44.96 40.07 44.47 C39.29 44.30 38.41 44.07 37.99 43.39 C37.56 42.71 38.44 42.24 38.88 41.75 L39.71 41.17 C44.39 38.63 48.58 37.17 53.89 36.98 C55.95 36.91 58.01 37.20 60.05 37.50 C62.90 37.91 65.76 38.32 68.63 38.73 C69.12 38.80 69.69 38.91 69.81 39.53 C69.89 39.96 69.69 40.41 69.34 40.67 L69.34 40.67" fill="currentColor" stroke="none"/><path d="M73.04 85.57 C72.68 88.01 71.68 90.40 69.99 91.74 C67.99 93.33 65.34 93.20 63.13 92.11 C60.93 91.01 59.09 89.06 57.33 87.08 C54.95 84.41 52.65 81.63 50.44 78.75 C50.36 78.64 50.28 78.53 50.21 78.41 C56.97 75.72 63.55 72.37 69.92 68.45 C70.51 70.45 71.51 72.35 72.10 74.38 C72.46 75.60 72.66 76.88 72.83 78.16 C73.17 80.61 73.39 83.12 73.04 85.57 L73.04 85.57" fill="currentColor" stroke="none"/><path d="M82.17 64.04 C78.52 66.25 74.80 68.31 71.00 70.22 C64.34 73.56 57.46 76.41 50.40 78.71 C50.33 78.62 50.27 78.52 50.24 78.40 C50.14 78.04 50.32 77.67 50.49 77.33 C51.55 75.30 52.61 73.26 53.66 71.23 L82.17 64.04 L82.17 64.04" fill="currentColor" stroke="none"/><path d="M46.08 79.05 C43.68 83.25 40.93 87.28 37.36 90.58 C33.21 94.41 27.82 97.20 22.10 97.39 C21.77 97.40 21.42 97.40 21.13 97.24 C20.79 97.05 20.61 96.68 20.48 96.32 C19.34 93.10 21.19 89.69 21.65 86.32 C21.70 85.91 21.73 85.49 21.75 85.08 C26.87 83.13 32.47 82.23 37.87 81.07 C40.62 80.48 43.36 79.81 46.08 79.05 L46.08 79.05" fill="currentColor" stroke="none"/><path d="M39.12 15.38 L39.12 31.42 C39.12 31.42 54.77 27.59 60.68 27.41 C66.58 27.23 83.13 32.15 83.13 32.15 L83.68 15.38 L39.12 15.38" fill="currentColor" stroke="currentColor" stroke-width="2.51" stroke-linejoin="round"/><path d="M20.74 11.85 L62.87 2.00 L104.56 11.85 L62.10 22.59 L20.74 11.85" fill="currentColor" stroke="none"/><path d="M20.74 11.85L62.10 22.59L104.56 11.85L62.87 2.00Z" fill="none" stroke="var(--cut,#fff)" stroke-width="3.14" stroke-linejoin="round"/><path d="M33.82 35.85 C31.97 35.85 29.86 34.53 29.62 34.38 C29.17 34.09 28.95 33.54 29.08 33.02 L31.78 22.28 C31.91 21.77 32.34 21.39 32.87 21.34 L34.88 21.13 C34.92 21.12 34.96 21.12 35.01 21.12 C35.58 21.12 36.10 21.52 36.23 22.09 L38.88 33.33 C39.02 33.92 38.71 34.54 38.14 34.77 C37.90 34.88 35.67 35.80 33.94 35.85 L33.82 35.85 L33.82 35.85" fill="currentColor" stroke="none"/><path d="M35.01 22.38 L37.65 33.62 C37.65 33.62 35.45 34.55 33.90 34.60 C33.88 34.60 33.85 34.60 33.82 34.60 C32.29 34.60 30.30 33.32 30.30 33.32 L33.00 22.59 L35.01 22.38 M35.01 19.87 C34.92 19.87 34.84 19.87 34.75 19.88 L32.74 20.09 C31.69 20.20 30.82 20.95 30.56 21.98 L27.86 32.71 C27.60 33.76 28.04 34.85 28.94 35.44 C29.38 35.71 31.66 37.11 33.82 37.11 C33.88 37.11 33.93 37.11 33.98 37.11 C35.90 37.05 38.19 36.12 38.63 35.93 C39.76 35.45 40.38 34.23 40.10 33.04 L37.45 21.80 C37.18 20.66 36.16 19.87 35.01 19.87 L35.01 19.87" fill="var(--cut,#fff)" stroke="none"/><path d="M32.72 12.95h2.89v10.82h-2.89z" fill="currentColor" stroke="none"/><path d="M36.65 22.59 C36.65 23.04 36.58 23.47 36.44 23.89 C36.31 24.30 36.11 24.67 35.86 24.99 C35.61 25.31 35.33 25.55 35.00 25.73 C34.67 25.90 34.33 25.98 33.98 25.98 C33.62 25.98 33.28 25.90 32.96 25.73 C32.63 25.55 32.34 25.31 32.09 24.99 C31.84 24.67 31.65 24.30 31.51 23.89 C31.38 23.47 31.31 23.04 31.31 22.59 C31.31 22.14 31.38 21.70 31.51 21.29 C31.65 20.87 31.84 20.50 32.09 20.19 C32.34 19.87 32.63 19.62 32.96 19.45 C33.28 19.28 33.62 19.19 33.98 19.19 C34.33 19.19 34.67 19.28 35.00 19.45 C35.33 19.62 35.61 19.87 35.86 20.19 C36.11 20.50 36.31 20.87 36.44 21.29 C36.58 21.70 36.65 22.14 36.65 22.59" fill="currentColor" stroke="none"/><path d="M58.42 70.44 C58.42 70.44 88.36 57.16 94.05 52.75 C99.75 48.34 101.81 44.94 101.81 44.94 L106.39 44.13 C106.39 44.13 105.57 47.43 104.29 49.03 C103.01 50.63 96.59 55.85 93.78 57.45 C90.98 59.06 70.69 70.78 70.69 70.78 L58.42 70.44 L58.42 70.44" fill="currentColor" stroke="none"/></symbol></svg>
 <div class="sheet" data-theme="blueprint">
 <div class="wrap">
   <header>
-    <div class="wm">LessonOrca<i></i></div>
+    <div class="wm"><svg class="mark" viewBox="0 0 108.67 99.40" aria-hidden="true"><use href="#orca"/></svg>LessonOrca<i></i></div>
     <div class="tag">Founding beta · SAT &amp; ACT</div>
   </header>
 
@@ -175,9 +220,49 @@
       </div>
     </section>
 
-    <aside class="media" aria-label="LessonOrca reel">
-      <video id="reel" src="reel.mp4" poster="poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
-      <div class="ph" id="ph" hidden><div>One answer.<br><span>Everything updates.</span></div></div>
+    <aside class="media" aria-label="How LessonOrca works, shown with an example student">
+      <video id="reel" hidden preload="none" muted playsinline></video>
+      <div class="ph" id="ph">
+        <div class="fig-top"><svg class="mark sm" viewBox="0 0 108.67 99.40" aria-hidden="true"><use href="#orca"/></svg><span class="fig-wm">LessonOrca</span><span class="fig-tag">Nora's session</span></div>
+        <div class="fig-title">One answer.<br><span>Everything updates.</span></div>
+
+        <div class="fstep">
+          <div class="fnum">1</div>
+          <div class="fbody">
+            <div class="flabel">You answer</div>
+            <div class="slip q"><b>Q.</b> 3x &minus; 12 = 18. What is x&nbsp;+&nbsp;2?</div>
+            <div class="work">
+              <div>3x = 30</div>
+              <div><span class="ring">x = 10<svg viewBox="0 0 120 50" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M60 4 C 100 3, 118 14, 116 26 C 114 40, 88 47, 58 46 C 26 45, 4 38, 4 25 C 4 12, 28 4, 64 5"/></svg></span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fstep">
+          <div class="fnum">2</div>
+          <div class="fbody">
+            <div class="flabel">Orca reads every step</div>
+            <div class="bub orca"><span class="av"><svg class="mark xs" viewBox="0 0 108.67 99.40" aria-hidden="true"><use href="#orca"/></svg></span><span>What does the question ask for: x, or x&nbsp;+&nbsp;2?</span></div>
+            <div class="bub you">x + 2. So it is 12.</div>
+            <div class="why">Because: she stopped at x.</div>
+          </div>
+        </div>
+
+        <div class="fstep">
+          <div class="fnum">3</div>
+          <div class="fbody">
+            <div class="flabel">Your plan rewrites itself</div>
+            <div class="slip plan">
+              <div class="ph-head"><b>Nora's plan</b><span>Updated after Thursday</span></div>
+              <div class="pr"><b>Sun</b><span class="t"><s>Linear equations</s></span><span class="m">60 min</span></div>
+              <div class="pr"><b>Sun</b><span class="t"><mark>Reading what&rsquo;s&nbsp;asked</mark></span><span class="m">20 min</span></div>
+              <div class="pr"><b>Tue</b><span class="t">Quadratics, part 2</span><span class="m">40 min</span></div>
+            </div>
+            <span class="pen">Checked. J.R.</span>
+          </div>
+        </div>
+        <div class="fig-eg">Nora and her coach J.R. are examples.</div>
+      </div>
     </aside>
   </main>
 </div>
@@ -306,5 +391,6 @@ const me = (qs.get("me") || "").toLowerCase();
 if (/^[a-f0-9]{8}$/.test(me)) loadMe(me);
 else if (qs.get("err")) show("v-err"), $("v-join").hidden = false;
 </script>
+<script>if(!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("mo");</script>
 </body>
 </html>
